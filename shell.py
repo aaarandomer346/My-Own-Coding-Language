@@ -4,5 +4,9 @@ while True:
     text = input('basic > ')
     result, error = basic.run('<stdin>', text)
 
-    if error: print(error.as_string())
+    print(error)
+    if error:
+        print('error detected')
+        print(error.as_string())
+        print('error proccessed')
     else: print(result)
